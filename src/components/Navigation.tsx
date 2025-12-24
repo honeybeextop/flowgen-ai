@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Workflow } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const navLinks = [
@@ -24,9 +24,9 @@ export function Navigation() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">F</span>
+              <Workflow className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-serif text-xl font-medium text-foreground">
+            <span className="font-sans text-xl font-semibold text-foreground tracking-tight">
               Flowgen
             </span>
           </Link>
@@ -37,7 +37,7 @@ export function Navigation() {
               <Link
                 key={link.label}
                 to={link.href}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-secondary"
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-secondary"
               >
                 {link.label}
               </Link>
@@ -46,10 +46,10 @@ export function Navigation() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="font-medium">
               Sign In
             </Button>
-            <Button variant="hero" size="sm">
+            <Button variant="hero" size="sm" className="font-medium">
               Get Started
             </Button>
           </div>
@@ -77,13 +77,13 @@ export function Navigation() {
                   key={link.label}
                   to={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="px-4 py-3 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  className="px-4 py-3 font-medium text-foreground hover:bg-secondary rounded-lg transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
               <hr className="my-2 border-border" />
-              <Button variant="hero" className="w-full">
+              <Button variant="hero" className="w-full font-medium">
                 Get Started
               </Button>
             </div>

@@ -1,14 +1,10 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, FileText } from 'lucide-react';
-import { StarryBackground } from './StarryBackground';
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Starry Background */}
-      <StarryBackground />
-      
       {/* Hero Glow Effect */}
       <div className="hero-glow top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2" />
       
