@@ -108,7 +108,7 @@ export function StarryBackground() {
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, hsl(20 10% 8%) 0%, transparent 40%, transparent 100%)'
+          background: 'linear-gradient(to top, hsl(0 0% 4%) 0%, transparent 30%, transparent 100%)'
         }}
       />
     </div>
